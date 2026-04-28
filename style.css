@@ -1,0 +1,211 @@
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --accent-blue: #38bdf8;
+    --accent-red: #f43f5e;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Typography */
+.hero {
+    text-align: center;
+    padding: 60px 0 40px;
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+}
+
+.hero p {
+    color: var(--text-secondary);
+    margin-top: 10px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Buttons */
+.action-bar {
+    margin: 30px 0;
+    text-align: right;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-blue);
+    color: var(--bg-main);
+    padding: 12px 24px;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #0284c7;
+    transform: translateY(-2px);
+}
+
+.btn-submit {
+    background-color: var(--accent-blue);
+    color: var(--bg-main);
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+.btn-delete {
+    background: transparent;
+    color: var(--accent-red);
+    font-size: 0.8rem;
+    margin-top: 15px;
+    border: 1px solid var(--accent-red);
+    padding: 5px 10px;
+}
+
+.btn-delete:hover {
+    background: var(--accent-red);
+    color: white;
+}
+
+/* Form Styles */
+.form-container {
+    background-color: var(--bg-card);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+/* Grid & Cards */
+.roster-section {
+    margin-bottom: 50px;
+}
+
+.grid-roster {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 3px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.card.staff {
+    border-top-color: var(--accent-red);
+}
+
+.card.anggota {
+    border-top-color: var(--accent-blue);
+}
+
+.card-nick {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.card-name {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.card-discord {
+    display: inline-block;
+    background-color: #27272a;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #a1a1aa;
+    margin-bottom: 10px;
+}
+
+.empty-state {
+    color: var(--text-secondary);
+    font-style: italic;
+    grid-column: 1 / -1;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoStressZone (NsZ) - Roster Clan Point Blank</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1 class="glitch" data-text="NoStressZone">NoStressZone</h1>
+            <p>Official Roster of NsZ Point Blank Clan</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="action-bar">
+            <button id="btnToggleForm" class="btn-primary">+ Tambahkan Member</button>
+        </div>
+
+        <section id="formSection" class="form-container hidden">
+            <form id="memberForm">
+                <div class="form-group">
+                    <label for="nama">Nama Asli</label>
+                    <input type="text" id="nama" required placeholder="Masukkan nama...">
+                </div>
+                <div class="form-group">
+                    <label for="nick">Nick Ingame</label>
+                    <input type="text" id="nick" required placeholder="NsZ・Nickname">
+                </div>
+                <div class="form-group">
+                    <label for="discord">Nama Discord</label>
+                    <input type="text" id="discord" required placeholder="Discord#1234">
+                </div>
+                <div class="form-group">
+                    <label for="role">Role / Tingkatan</label>
+                    <select id="role" required>
+                        <option value="staff">Staff</option>
+                        <option value="anggota">Anggota</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Simpan Data</button>
+            </form>
+        </section>
+
+        <section class="roster-section">
+            <h2 class="section-title"><span>👑</span> Staff Command</h2>
+            <div id="staffList" class="grid-roster">
+                </div>
+        </section>
+
+        <section class="roster-section">
+            <h2 class="section-title"><span>⚔️</span> Anggota Pasukan</h2>
+            <div id="anggotaList" class="grid-roster">
+                </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
